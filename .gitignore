@@ -45,3 +45,10 @@ pnpm-debug.log*
 # Test coverage (if run from workspace root)
 coverage/
 .nyc_output/
+
+# Build output (also listed in scratch-gui/.gitignore and scratch-vm/.gitignore)
+scratch-gui/build/
+scratch-gui/dist/
+scratch-vm/dist/
+scratch-vm/playground/
+scratch-vm/benchmark/

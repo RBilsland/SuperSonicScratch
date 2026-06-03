@@ -14,11 +14,22 @@ SuperSonicScratch/
 ## First-time setup
 
 ```bash
-cd scratch-vm && npm install && npm link
-cd ../scratch-gui && npm install && npm link scratch-vm
+cd scratch-vm && npm install && npm run build
+cd ../scratch-gui && npm install
 ```
 
+`scratch-gui` depends on the local `scratch-vm` via `file:../scratch-vm` (no `npm link` needed).
+
 Requires **Node.js 18+**.
+
+## GitHub Pages
+
+Pushes to **`main`** build and deploy automatically via [GitHub Actions](.github/workflows/pages.yml).
+
+1. In the repo on GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+2. After the first successful run, the site is at **https://RBilsland.github.io/SuperSonicScratch/** (replace with your `username/repo` if forked).
+
+To deploy manually: **Actions → Deploy to GitHub Pages → Run workflow**.
 
 ## Development
 
