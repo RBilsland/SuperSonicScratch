@@ -43,10 +43,10 @@ jobs:
         working-directory: scratch-gui
         env:
           HUSKY: '0'
-          NODE_ENV: production
         run: |
           npm ci
-          npm run build
+          # NODE_ENV must not be set during npm ci or devDependencies (rimraf, webpack) are skipped.
+          NODE_ENV=production npm run build
           touch build/.nojekyll
 
       - name: Upload Pages artifact
