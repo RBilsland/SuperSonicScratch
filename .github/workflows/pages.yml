@@ -36,7 +36,8 @@ jobs:
           HUSKY: '0'
         run: |
           npm ci
-          npm run build
+          # npm run build runs jsdoc first, which exits 1 in CI despite succeeding; webpack alone is enough.
+          npx webpack --progress
 
       - name: Build scratch-gui
         working-directory: scratch-gui
