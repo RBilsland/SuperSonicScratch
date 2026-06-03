@@ -1,0 +1,47 @@
+# SuperSonic Scratch workspace
+# scratch-vm/ and scratch-gui/ also ship their own .gitignore files for build output, etc.
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Editors & IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+
+# Node / npm
+node_modules/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Local npm pack downloads (e.g. supersonic-scsynth-synthdefs-*.tgz)
+*.tgz
+
+# Secrets & local env
+.env
+.env.*
+!.env.example
+.secrets
+
+# Test coverage (if run from workspace root)
+coverage/
+.nyc_output/
